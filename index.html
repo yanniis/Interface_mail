@@ -1,26 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
   <title>Formulaire d'envoi d'e-mail</title>
 </head>
 <body>
-  <h1>Formulaire d'envoi d'e-mail</h1>
+  <header>
+    <nav>
+      <h1>Formulaire d'envoi d'e-mail</h1>
+    </nav>
+</header>
 
+<main>
   <form action="envoie_mail.php" method="post">
-    <label for="nom">Nom :</label>
-    <input type="text" id="nom" name="nom" required><br>
+    <div class="destinataire">
+    <label for="nom">Destinataire :</label>
+  </br>
+  <input type="email" name="nom" size="40" list="defaultEmails" multiple>
 
-    <label for="email">Adresse e-mail :</label>
-    <input type="email" id="email" name="email" required><br>
+  <datalist id="defaultEmails">
+    <option value="email1@example.com">
+      <option value="email2@example.com">
+      <option value="email3@example.com">
+      <option value="email4@example.com">
+      <option value="email5@example.com">
+  </datalist>
+  </div>
 
-    <label for="destinataire">Destinataire :</label>
-    <input type="email" id="destinataire" name="destinataire" required><br>
+  <div class="copie">
+    <label for="email">Copie mail :</label>
+  </br>
+  <input type="email" name="email" size="40" list="defaultEmails" multiple>
+<br>
+  </div>
 
-    <label for="message">Message :</label>
-    <textarea id="message" name="message" required></textarea><br>
+  <div class="object">
+    <label for="destinataire">Objet du mail :</label>
+  </br>
+    <input type="text" id="destinataire" name="destinataire" placeholder="Tableur_2023" required><br>
+  </div>
 
-    <input type="submit" value="Envoyer">
-    <input type="reset" value="Effacer">
+  <div class="message">
+    <label id="message" for="message">Message :</label>
+  </br>
+    <textarea id="text" name="message" placeholder="Voici le tableau que j’ai pu extraire concernant ..." required></textarea><br>
+  </div>
+
+  <div class="import">
+    <label id="file" for="import">Pièce(s) jointe(s) :</label>
+    <input type="file" id="import" name="import" accept="image/png, image/jpeg" multiple>
+  </div>
+
+  <div class="send">
+    <button>Envoyer</button>
+  </div>
+
   </form>
+</main>
+
+<footer>
+  
+</footer>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <?php
 if(isset($_POST['email'])) {
-    $to = $_POST['destinataire']; // Adresse e-mail du destinataire spécifiée dans le formulaire
+    $to = $_POST['destinataire'];  
     $subject = "Nouveau message depuis le formulaire de contact";
     $message = "Nom: " . $_POST['nom'] . "\n\n";
     $message .= "Email: " . $_POST['email'] . "\n\n";
