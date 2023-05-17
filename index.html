@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/script.js"></script>
   <title>Formulaire d'envoi d'e-mail</title>
 </head>
 <body>
@@ -15,11 +16,11 @@
 </header>
 
 <main>
-  <form action="envoie_mail.php" method="post">
+  <form>
     <div class="destinataire">
     <label for="nom">Destinataire :</label>
   </br>
-  <input type="email" name="nom" size="40" list="defaultEmails" multiple>
+  <input type="email" id="destinataire" name="nom" size="40" list="defaultEmails" multiple>
 
   <datalist id="defaultEmails">
     <option value="email1@example.com">
@@ -40,7 +41,7 @@
   <div class="object">
     <label for="destinataire">Objet du mail :</label>
   </br>
-    <input type="text" id="destinataire" name="destinataire" placeholder="Tableur_2023" required><br>
+    <input type="text" id="object" name="destinataire" placeholder="Tableur_2023" required><br>
   </div>
 
   <div class="message">
@@ -51,11 +52,12 @@
 
   <div class="import">
     <label id="file" for="import">Pièce(s) jointe(s) :</label>
-    <input type="file" id="import" name="import" accept="image/png, image/jpeg" multiple>
+    <input type="file" id="import" name="import" multiple>
   </div>
 
+
   <div class="send">
-    <button>Envoyer</button>
+    <input type="submit" value="Envoyer">
   </div>
 
   </form>

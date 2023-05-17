@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Formulaire d'envoi d'e-mail</h1>
+    <form action="/envoyer_email" method="post" enctype="multipart/form-data">
+      <label for="destinataire">Destinataire :</label>
+      <input type="email" id="destinataire" name="destinataire" required><br><br>
+      <label for="message">Message :</label>
+      <textarea id="message" name="message" required></textarea><br><br>
+      <label for="piece_jointe">Pièce jointe :</label>
+      <input type="file" id="piece_jointe" name="piece_jointe"><br><br>
+      <input type="submit" value="Envoyer">
+    </form>
+  </body>
+</html>
